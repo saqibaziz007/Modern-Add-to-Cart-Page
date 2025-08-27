@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Page — Add to Cart (HTML/CSS/JS)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">PD</div>
+      <div>
+        <h1>Product Showcase</h1>
+        <div style="color:var(--muted);font-size:13px">Modern Product Page</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="search" role="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/>
+          <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <input id="search" placeholder="Search products..." />
+      </div>
+
+      <button class="cart-btn" id="toggleCart" aria-expanded="false">🛒 Cart <span id="cartCount" class="badge">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="products" aria-label="Products">
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <aside class="cart" id="cartPanel" aria-label="Shopping cart">
+      <h3>Your Cart</h3>
+      <div id="cartList" class="cart-list"></div>
+      <div id="cartEmpty" class="empty" style="display:none">Your cart is empty</div>
+      <div class="totals">
+        <div style="display:flex;justify-content:space-between"><strong>Subtotal</strong><strong id="subtotal">$0.00</strong></div>
+        <button id="checkout" class="checkout">Checkout</button>
+      </div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" style="display:none"></div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
